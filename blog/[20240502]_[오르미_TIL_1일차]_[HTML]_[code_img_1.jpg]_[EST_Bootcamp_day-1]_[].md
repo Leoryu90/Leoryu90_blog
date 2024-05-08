@@ -64,9 +64,9 @@ EX) 사람1이 명령어를 입력하는 동안 CPU가 쉬지 않고 사람n의 
 3. http 통신으로 파일을 주고 받는 하나의 시스템
 ```
 
-## **웹과 인터넷**
+### **웹과 인터넷**
 
-### **웹 Web 이란?**
+#### **웹 Web 이란?**
 
 World Wide Web ≠ 인터넷
 
@@ -122,21 +122,21 @@ HTML, CSS, JavaScript 등의 기술을 사용하여 **웹 페이지의 구조, 
 
 ### **웹 상에서 프로그래밍 언어 역할**
 
-### **HTML/CSS/JS**
+#### **HTML/CSS/JS**
 
-####  **HTML (HyperText Markup Language)**
+#####  **HTML (HyperText Markup Language)**
 ```
 웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를 정의
 
 확장자 .html
 ```
-####  **CSS (Cascading Style Sheets)**
+#####  **CSS (Cascading Style Sheets)**
 ```
 웹 페이지의 모양/표현 디자인적인 요소를 만듬
 
 확장자 .css
 ```
-####  **JavaScript**
+#####  **JavaScript**
 ```
 웹 페이지의 기능/동작
 (근육, 뇌 등 다양하게 표현, 페이지의 움직임을 다양하게 표현)
@@ -144,7 +144,7 @@ HTML, CSS, JavaScript 등의 기술을 사용하여 **웹 페이지의 구조, 
 확장자 .js
 ```
 
-### JAVA, Python
+#### JAVA, Python
 
 **웹 페이지의 데이터 처리 담당**
 ```
