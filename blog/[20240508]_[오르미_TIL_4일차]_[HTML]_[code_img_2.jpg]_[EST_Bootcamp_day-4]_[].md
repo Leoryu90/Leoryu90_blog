@@ -98,4 +98,3 @@ label 안에 input 중첩하여 연결하기:
 > - HTML 여러 속성들을 다 외울 수 없음.
 > - MDN에서 참고를 많이 합니다.
 > - https://developer.mozilla.org/ko/docs/Web/HTML/Element
-ㄴ
