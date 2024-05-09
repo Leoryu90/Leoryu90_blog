@@ -211,6 +211,7 @@ Div로 묶여있기 때문에 Div에 스타일을 적용하면 h1,h2,p 태그를
 - 요소, 패딩, 테두리, 마진으로 구성
 
 ![CSS에서 요소의 box model을 설명하는 그림](img/day5/box.png)
+<img src="img/day5/box.png" width="300" height="200">
 
 **CSS Box Model 관련 명령어**
 
@@ -221,3 +222,4 @@ Div로 묶여있기 때문에 Div에 스타일을 적용하면 h1,h2,p 태그를
 - padding: 패딩 크기 조절 (px 등 단위가 필요)
 - margin: 마진 크기를 조절 (px 등 단위가 필요)
 - border: 테두리 지정
+
