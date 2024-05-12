@@ -27,6 +27,8 @@
 ><img src="img/day6/plus.png" width="300" height="200" alt="ir기법을 설명하는 예시">
 >  
 
+------------------
+
 ### 💡 position
 
 #### position이란?
@@ -66,6 +68,8 @@
 - `z-index`: 에프터 이팩트 3D랑 개념이 비슷함.(3D개념을 웹페이지에서 적용 z값을 설정함)
 
 <img src="img/day6/position5.png" width="300" height="300" alt="포지션 속성값 설명5">
+
+------------
 
 ### 💡  flex(중요)
 
