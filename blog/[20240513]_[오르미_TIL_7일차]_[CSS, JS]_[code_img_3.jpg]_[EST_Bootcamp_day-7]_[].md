@@ -1,5 +1,5 @@
 # 목차
-- [CSS 복습](#CSS 복습)
+- [CSS 복습](#CSS-복습)
   - [flex-item에 사용하는 속성](#flex-item에-사용하는-속성)
 - [JavaScript](#javascript)
 - [문의 방법](#문의방법)
@@ -8,7 +8,7 @@
 ## 오르미 백엔드 7일차
 
 ### 💡 CSS 복습
-<a id="CSS 복습"></a>
+<a id="CSS-복습"></a>
 
 #### flex-item에 사용하는 속성
 <a id="flex-item에-사용하는-속성"></a>
