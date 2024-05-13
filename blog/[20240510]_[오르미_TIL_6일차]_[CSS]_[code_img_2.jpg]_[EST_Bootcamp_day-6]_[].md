@@ -44,28 +44,28 @@
 
 #### position의 종류
 
-- `static`: 기본값, 태그 순으로 정상적인 흐름(normal flow)에 따라 위치가 지정
+`static`: 기본값, 태그 순으로 정상적인 흐름(normal flow)에 따라 위치가 지정
 
 <img src="img/day6/position1.png" width="300" height="400" alt="포지션 속성값 설명1">
 
-- `relative`: 기본적인 자리에서 위치 이동이 가능.
+`relative`: 기본적인 자리에서 위치 이동이 가능.
 
 <img src="img/day6/position2.png" width="300" height="400" alt="포지션 속성값 설명2">
 
-- `absolute`: My way, 구애받지 않지만 부모 요소가 있으면 부모박스 내에서 시작
+`absolute`: My way, 구애받지 않지만 부모 요소가 있으면 부모박스 내에서 시작
 
 예시 (box3 적용)
 
 <img src="img/day6/position3.png" width="300" height="400" alt="포지션 속성값 설명3">
 
-- `fixed`: 고정 된 상태로 스크롤에 영향을 받지 않습니다.
+`fixed`: 고정 된 상태로 스크롤에 영향을 받지 않습니다.
 
 <img src="img/day6/position4.png" width="300" height="400" alt="포지션 속성값 설명4">
 
-- `sticky`: 속성값이 적용된 요소끼리 달라붙고 그자리를 씀.
+`sticky`: 속성값이 적용된 요소끼리 달라붙고 그자리를 씀.
 
 
-- `z-index`: 에프터 이팩트 3D랑 개념이 비슷함.(3D개념을 웹페이지에서 적용 z값을 설정함)
+`z-index`: 에프터 이팩트 3D랑 개념이 비슷함.(3D개념을 웹페이지에서 적용 z값을 설정함)
 
 <img src="img/day6/position5.png" width="300" height="300" alt="포지션 속성값 설명5">
 
@@ -97,19 +97,33 @@
 
 >`flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`
 
+
 #### align-items, align-content
 
 - `align-items`: 교차 축을 기준으로 정렬합니다.
 - `align-content`: 컨테이너의 교차 축의 아이템들이 여러 줄일때 사용 가능합니다.
    - `flex-wrap:wrap` 인 상태에서 사용해야 합니다.
 
+
 #### gap
 
 - 아이템 사이의 간격을 설정할 때 사용 할 수 있는 속성입니다. 
 
+
 #### flex-wrap
 
 - 한 줄에 배치되게 할 것인지, 가능한 영역 내에서 여러 행으로 나누어 표현할 것인지 결정
+
+#### flex-flow
+
+- flex-direction flex-wrap 단축속성 (한번에 작성하는 속성)
+
+```css
+flex-flow: row wrap;
+```
+
+-----------------
+
 
 > flex 추천 연습사이트\
 > https://flexboxfroggy.com/#ko
