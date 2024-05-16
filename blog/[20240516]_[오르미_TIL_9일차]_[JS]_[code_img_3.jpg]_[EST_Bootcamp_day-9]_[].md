@@ -10,6 +10,8 @@
         - [sort()](#sort)
         - [forEach()](#forEach)
         - [map()]((#map))
+        - [filter()](#filter)
+        - [includes](#includes)
 
 
 ## 💡 타입(type)
@@ -50,7 +52,7 @@ String str = "Java"; // Java의 변수 선언식
 값의 참조가 지정됨 (자바의 주소값과 같은개념)   
 값 자체가 저장되는 것이 아닌 위치값이 저장 됨
 
-#### 2-1 배열 (Array)
+#### a. 배열 (Array)
 <a id="배열"></a>
 
 변수에 여러 값을 저장하는 방식으로   
@@ -172,6 +174,8 @@ arr.forEach(function(item, index) {
 // arr 에 [0,1,2] 값이 들어감.
 ```
 
+반복적으로 작동하여 결과값을 만드는 예시
+
 ```javascript
 const avengers = ['spiderman', 'ironman', 'hulk', 'thor'];
 
@@ -181,11 +185,119 @@ avengers.forEach(function (item) {
 });
 ```
 
+결과값!!!
+
 <img src="img/day9/결과값1.png" width="500" height="200" alt="forEach 예시에 대한 결과값">   
 
 7. map()
    <a id="map"></a>
 
+각 요소에 대해 주어진 함수를 실행하고, 그 결과를 새로운 배열로 반환
 
+```javascript
+const arr = [1, 2, 3];
+const newArr = arr.map(function(item, index) {
+   return item * index;
+});
+
+console.log(newArr);
+
+// 결과값 [0, 2, 6]
+```
+<details>
+<summary> 오픈! ✨배열 안에 객체에서 데이터를 뽑는 형태</summary>
+
+```javascript
+const data = [
+    {
+        "_id": "642ba3980785cecff3f39a8d",
+        "index": 0,
+        "age": 28,
+        "eyeColor": "green",
+        "name": "Annette Middleton",
+        "gender": "female",
+        "company": "KINETICA"
+    },
+    {
+        "_id": "642ba398d0fed6e17f2f50c9",
+        "index": 1,
+        "age": 37,
+        "eyeColor": "green",
+        "name": "Kidd Roman",
+        "gender": "male",
+        "company": "AUSTECH"
+    },
+    {
+        "_id": "642ba39827d809511d00dd8d",
+        "index": 2,
+        "age": 39,
+        "eyeColor": "brown",
+        "name": "Best Ratliff",
+        "gender": "male",
+        "company": "PRISMATIC"
+    }
+];
+
+const ages = data.map((item) => item.age);
+```
+
+age 값만 뽑아서 새로운 배열을 생성할 수 있다.
+
+</details>
+
+8. filter()
+   <a id="filter"></a>
+
+특정 조건을 만족하는 요소들만 추출하여 새로운 배열을 만듬   
+숫자나 날자 등 특정한 원소추출에 유용하다.
+
+```javascript
+//배열에서 2의 배수를 추출하여 새로운 배열을 만드는 코드
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const newArr = arr.filter(function(el) {
+  return el % 2 === 0;
+});
+
+console.log(newArr);
+```
+
+9. includes
+   <a id="includes"></a>
+
+요소가 포함이 되어 있으면 true 아니면 false를 반환합니다.
+```javascript
+const arr1 = ['hello', 'world', 'hojun']
+arr1.includes('world')
+
+//ture
+```
+
+#### b. 객체 (Object)
+
+배열처럼 여러 데이터를 한 변수에 저장하지만 키-값 쌍으로 이루어져있는 자료형
+
+- [map()](#map) 에서 예시로 사용했습니다. 
+
+구조는 아래와 같습니다.
+
+```javascript
+const babaYaga = {      
+  name: "John Wick",
+  age: 53,
+  from: "벨라루스",
+	askingHim: function(){
+		console.log("Yeah, I'm thinking I'm back!");
+	}
+};
+
+//접근법
+console.log(`${babaYaga.name} from ${babaYaga.['from']}`);
+
+//속성추가법
+babaYaga.job = "강아지 사육사";
+
+//속성제거
+delete babaYaga.job;
+```
 
 --------------------------------------
