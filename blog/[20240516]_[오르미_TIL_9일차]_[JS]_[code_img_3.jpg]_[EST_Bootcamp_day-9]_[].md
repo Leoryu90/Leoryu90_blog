@@ -13,6 +13,9 @@
         - [filter()](#filter)
         - [includes](#includes)
      2. [객체 (Object)](#객체)
+        - [객체의 메소드](#객체의-메소드)
+          1. [hasOwnProperty](#hasOwnProperty)
+          2. [for … in](#for-in)
 
 
 ## 💡 타입(type)
@@ -291,7 +294,7 @@ const babaYaga = {
 		console.log("Yeah, I'm thinking I'm back!");
 	}
 };
-
+-----------------------------------------------------------------
 //접근법
 console.log(`${babaYaga.name} from ${babaYaga.['from']}`);
 
@@ -300,6 +303,75 @@ babaYaga.job = "강아지 사육사";
 
 //속성제거
 delete babaYaga.job;
+
+//in 프로퍼티가 객체안에 존재하는지 알 수 있음
+console.log('age' in babaYaga);
+console.log('mercy' in babaYaga);
 ```
+
+> 프로퍼티 = 키 + 값
+
+##### 객체의 메소드
+<a id="객체의-메소드"></a>
+
+1. hasOwnProperty()
+   <a id="hasOwnProperty"></a>
+
+객체 안에 프로퍼티를 가지고 있는지 확인할 수 있는 메소드   
+불리언(true, false)으로 값을 리턴
+
+```javascript
+const aespa = {
+  members: ['카리나', '윈터', '지젤', '닝닝'],
+  from: '광야',
+	sing: function(){
+		return "적대적인 고난과 슬픔은 널 더 popping 진화시켜!"
+	}
+};
+
+console.log(aespa.hasOwnProperty('itzy')); //false
+console.log(aespa.hasOwnProperty('from')); //true
+```
+
+>  ✨위에서 in으로 쓰는 방식과 같은 결과값을 반환한다.   
+>  무엇을 더 많이 쓸까?
+
+2. for … in
+   <a id="for-in"></a>
+
+객체의 반복문처럼 쓰지만 처리순서가 순서대로 되는게 아님.   
+🔑순서가 중요하다면 일반적인 반복문 사용
+
+```javascript
+for (const variable in object) {
+	// ...
+}
+
+const person = {
+   name: '재현',
+   age: 20,
+   gender: 'male'
+};
+
+for (let key in person) {
+   console.log(`${key}: ${person[key]}`);
+}
+
+출력값
+name: 재현
+age: 20
+gender: male
+```
+
+3. keys(), values()
+
+`Object.keys()`: 객체의 속성 이름(key)들을 배열로 반환   
+`Object.values()`: 속성 값(value)들을 배열로 반환
+
+> ✨Object.메소드   
+> 자바스크립트 안에 원래 내장되어 있는 객체로   
+> 사용자가 언어를 편하게 사용할 수 있도록   
+> 여러가지 유용한 값들과 메소드를 미리 만들어둔 것
+
 
 --------------------------------------
