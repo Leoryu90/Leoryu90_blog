@@ -16,6 +16,7 @@
         - [객체의 메소드](#객체의-메소드)
           1. [hasOwnProperty](#hasOwnProperty)
           2. [for … in](#for-in)
+          3. [keys(), values()](#keys-values)
 
 
 ## 💡 타입(type)
@@ -364,6 +365,7 @@ gender: male
 ```
 
 3. keys(), values()
+   <a id="keys-values"></a>
 
 `Object.keys()`: 객체의 속성 이름(key)들을 배열로 반환   
 `Object.values()`: 속성 값(value)들을 배열로 반환
