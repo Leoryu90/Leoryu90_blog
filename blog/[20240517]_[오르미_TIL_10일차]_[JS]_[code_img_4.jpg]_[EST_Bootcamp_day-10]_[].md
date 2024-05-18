@@ -56,7 +56,7 @@ this는 자기가 속한 곳에서의 위치를 나타내지만 조금 복잡하
 ```javascript
 const me
     name : 'Leoryu',
-    address : '서울시 서대문구 우리집 1길',
+    address : '서울시 ㅇㅇ구 우리집 1길',
     phoneNum : '010-1234-5678',
     walk : function(){
         console.log('나는 지금 걷는다.');
@@ -75,3 +75,8 @@ const coding = {
 
 me.study(coding);
 ```
+
+> ✨ 객체와 객체가 서로 메소드를 통해 상호작용하게 하는것이 객체지향 프로그래밍
+
+
+
