@@ -29,13 +29,14 @@
 #### 자바로 할 수 있는것
    <a id="whatToDoJava"></a>
 
+
 1. 안드로이드개발   
-코틀린으로 더 많이 쓴다는..?
-<details>
-<summary> 코틀린 </summary>
-JVM이랑 안드로이드에서 사용하는 언어로 자바보다 간단하게 코드를 짤 수 있고   
-컴파일 속도가 빠르다고 함.
-</details>
+    코틀린으로 더 많이 쓴다는..?
+    <details>
+    <summary> 코틀린 </summary>
+    JVM이랑 안드로이드에서 사용하는 언어로 자바보다 간단하게 코드를 짤 수 있고   
+    컴파일 속도가 빠르다고 함.
+    </details>
 
 2. 데이터베이스 처리
 
@@ -57,3 +58,15 @@ JVM이랑 안드로이드에서 사용하는 언어로 자바보다 간단하게
 2. 메모리 자동 관리를 위한 가비지컬랙션
     
     <img src="img/day18/memory.png" width="300" height="200" alt="">
+
+    C, C++ 은 메모리를 프로그래머가 직접 할당
+    Java는 자바가 알아서 해줌
+
+3. 플랫폼 독립성
+
+    JVM(Java Virtual Machine)   
+   <img src="img/day18/JVM.png" width="300" height="200" alt="">   
+    
+
+
+
