@@ -48,19 +48,20 @@ JVM이랑 안드로이드에서 사용하는 언어로 자바보다 간단하게
 #### 자바의 특징
 <a id="ofTheJava"></a>
 
-1. 객체지향 언어
+- 객체지향 언어
     자바의 핵심적인 개념, 객체지향(OOP: Object Oriented Programming)   
    객체는 우리가 표현하고자 하는 구체적인 사물을 추상적으로 표현한 것
-2. 메모리 자동 관리를 위한 가비지컬랙션
-    
-    <img src="img/day18/memory.png" width="300" height="200" alt="">
+- 메모리 자동 관리를 위한 가비지컬랙션
 
-    C, C++ 은 메모리를 프로그래머가 직접 할당
-    Java는 자바가 알아서 해줌
-3. 플랫폼 독립성
-    JVM(Java Virtual Machine)   
-   <img src="img/day18/JVM.png" width="300" height="200" alt="">   
-    
+<img src="img/day18/memory.png" width="300" height="200" alt="">
 
+C, C++ 은 메모리를 프로그래머가 직접 할당   
+Java는 자바가 알아서 해줌
+
+-  플랫폼 독립성
+JVM(Java Virtual Machine)
+
+<img src="img/day18/JVM.png" width="300" height="200" alt="">   
+    
 
 
