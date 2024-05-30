@@ -203,7 +203,7 @@ public static void main(String[] args) {
 
 **저장형태**
 
-<img src="img/day19/save.png" width="300" height="200" alt="">
+<img src="img/day19/save.png" width="600" height="300" alt="">
 
 위의 사진처럼 기본형식은 바로 값을 저장하여 호출하면 빠르게 값을 줌   
 참조타입은 주소값을 통하여 객체를 참조!
