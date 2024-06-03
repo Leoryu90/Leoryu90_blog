@@ -294,7 +294,7 @@ switch (변수) {
 
 
 <details>
-<summary> 수업중 퀴즈 정답중 내가 맘에 드는 것  </summary>
+<summary> switch 수업중 퀴즈 정답중 내가 맘에 드는 것  </summary>
 
 ```java
 import static java.lang.System.*;
@@ -329,6 +329,7 @@ public class Java_20240603_12_switch_quiz5 {
 
 </details>
 
+--------------------------------------
 
 <details>
 <summary> 회고  </summary>
