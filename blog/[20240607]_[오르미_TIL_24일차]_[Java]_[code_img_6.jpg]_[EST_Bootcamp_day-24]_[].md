@@ -2,7 +2,7 @@
 
   **목차**
 - [코딩 테스트](#userWrite)
-  - [scanner](#scanner)
+  - [프로그래머스](#scanner)
 
 
 
