@@ -1,19 +1,22 @@
 # [5기] 백엔드 개발자 부트캠프 오르미
 
   **목차**
-- [코딩 테스트](#userWrite)
-  - [프로그래머스](#scanner)
+- [코딩 테스트](#cote)
+  - [프로그래머스](#PGS)
 
 
 
 ## 💡 코딩 테스트
-<a id="userWrite"></a>
+<a id="cote"></a>
 
 
 ### 프로그래머스
-<a id="scanner"></a>
+<a id="PGS"></a>
 
-<img src="img/day23/" width="500" height="400" alt="">
+<img src="img/day24/PGS.png" width="500" height="350" alt="">
+
+같이 실습하며 진행하는 것 외   
+프로그래머스 진행중인 상황
 
 <details>
 <summary> 회고 </summary>
