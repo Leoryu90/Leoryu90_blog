@@ -6,6 +6,8 @@
   - [함수의 활용 - 매개변수와 전달인자](#매개변수와-전달인자)
   - [메서드](#메서드)
   - [외부 클래스를 가져와 사용하기](#외부-클래스)
+-[객체지향 프로그래밍](#객체지향-프로그래밍) 
+  - [클래스의 구조와 특징](#클래스의-구조와-특징)
 
 
 
@@ -91,14 +93,112 @@ public class External {
 2. **컴파일:** 외부 클래스 파일과 메인 파일 모두를 컴파일합니다. Java 소스 파일(.java)은 Java 컴파일러(javac)에 의해 클래스 파일(.class)로 컴파일됩니다.
 3. **클래스 사용:** 메인 파일에서 외부 클래스를 인스턴스화하거나, 외부 클래스의 정적 메서드를 호출하여 사용합니다.
 
+import 예시
+
 <img src="img/day26/import.png" width="500" height="100" alt="">
+
+## 💡 객체지향 프로그래밍
+<a id="객체지향-프로그래밍"></a>
+
+현실에있는 어떠한 것을 코드로 추상화하는 것으로
+
+데이터, 기능으로 이루어져 있다.
+
+```java
+public class Person {
+    // 멤버 변수
+    String name;
+    String phoneNum;
+
+    // 생성자
+    public Person(String name, String phoneNum) {
+        this.name = name;
+        this.phoneNum = phoneNum;
+    }
+
+    // 메서드
+    public void sayHello() {
+        System.out.println("Hello, my name is " + name);
+    }
+
+    public void teaching(Student student){ //여기서 클래스 호출
+        student.levelUp();
+    }
+}
+// 다른 클래스
+public class Student {
+  int level;
+  public Student(){
+    this.level = 1;
+  }
+
+  public void levelUp(){
+    level++;
+    System.out.println("레벨이 1 상승했습니다!");
+  }
+}
+```
+
+위와 같이 객체와 객체가 서로 상호작용하게 프로그래밍 하는 것이   
+**객체지향 프로그램**이라고 한다.
+
+> 💡 **절차 지향 VS 객체 지향**   
+> **절차지향 프로그래밍**: 코드의 **재사용성이 낮고 유지보수가 어려움**,   
+> 작은 프로그램이나 간단한 작업에는 적합할 수 있습니다.   
+> **객체지향 프로그래밍**: 코드의 **재사용성과 유지보수성을 높음**,   
+> 복잡한 프로그램을 구조화하고 확장하기 쉽게 만들어줍니다.
+>
+ 
+## 클래스의 구조와 특징
+<a id="클래스의-구조와-특징"></a>
+
+기본적인 구조
+
+```java
+public class ClassName {
+    // 멤버 변수 (클래스의 상태를 나타내는 데이터)
+    // 생성자 (객체를 초기화하는 메서드)
+    // 메서드 (클래스의 동작을 정의하는 코드)
+}
+
+```
+
+내가 만든 예시
+
+```java
+public class Human {
+    // 멤버 변수
+    String name;
+    int age;
+    String place;
+    
+    //생성자
+    public Human(String name, int age, String place) {
+        this.name = name;
+        this.age = age;
+        this.place = place;
+    }
+    //메서드
+    public void sayHello() {
+        System.out.println("안녕하세요. 저는 " + name + " 입니다.");
+    }
+}
+```
+
+> 생성자 (Constructor)   
+> 클래스 이름과 같은 이름을 가진 특별한 메서드로,객체가 생성될 때 호출됩니다.   
+> 생성자는 객체의 초기 상태를 설정하는 데 사용됩니다.
+> 생성자는 생략하는게 가능하지만, 생략하는 경우 매개변수를 전달할 수 없기 때문에 복잡한 클래스에는 적절하지 않습니다.
+> 
+
 
 <details>
 <summary> 회고 </summary>
 
-따로 코딩 테스트 스터디에서 진도를 나갔어서 너무 어렵지는 않았어서<br>
-코테시간은 좀 좋습니다ㅎㅎ <br>
-계속 공부해서 더 발전하도록 노력하겠습니다~<br>
+본격적인 객체지향의 시작. <br>
+살짝 어려워진 느낌은 있지만 이해하는데 무리는 없었다.<br>
+자바 따로 듣는 강의가 절실하게 필요한 생각이 든다....<br>
+이미 결제는 완료ㅎㅎ
 
 </details>
 
