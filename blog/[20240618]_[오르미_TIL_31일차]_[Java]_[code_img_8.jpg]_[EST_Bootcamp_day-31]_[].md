@@ -54,9 +54,22 @@ String str = list.get(0);
 ### 제네릭타입을 사용하는 방법과 이유
 <a id="제네릭타입을-사용하는-방법과-이유"></a>
 
+제네릭 타입은 타입을 파라미터로 가지는 클래스와 인터페이스를 말한다.   
+
+사용예시
+```java
+public class 클래스명<T> { ... }
+public interface 인터페이스명<T> { ... }
+```
 
 
 
+타입	설명
+<T>	Type
+<E>	Element
+<K>	Key
+<V>	Value
+<N>	Number
 
 
 <img src="img/day30/" width="500" height="350" alt="">
