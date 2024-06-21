@@ -4,8 +4,7 @@
 
 - [💡 제네릭](#-제네릭)
   - [제네릭이란?](#제네릭이란)
-
-
+  - [제네릭타입을 사용하는 방법과 이유](#제네릭타입을-사용하는-방법과-이유)
 
 
 ## 💡 제네릭
@@ -33,6 +32,47 @@ List<Youtube> youtubeList = new ArrayList<Youtube>();
 youtubeList.add(new Youtube());   
 youtubeList.add(new DisneyPlus());   // 컴파일 에러 발생. Youtube 외에 다른 타입 저장불가
 ```
+
+그럼 타입을 지정했을 때 좋은점은 뭘까?   
+예시로 들면 ArrayList객체를 제네릭 없이 쓰면 값을 받을 때마다 타입을 변환해야한다.
+
+제네릭 지정 전
+```java
+List list = new ArrayList();
+list.add("Hello");
+String str = (String) list.get(0);
+```
+제네릭 지정후
+```java
+List<String> list = new ArrayList<String>();
+list.add("Hello");
+String str = list.get(0);
+```
+
+### 제네릭타입을 사용하는 방법과 이유
+<a id="제네릭타입을-사용하는-방법과-이유"></a>
+
+제네릭 타입은 타입을 파라미터로 가지는 클래스와 인터페이스를 말한다.
+
+사용예시
+```java
+public class 클래스명<T> { ... }
+public interface 인터페이스명<T> { ... }
+```
+
+
+
+타입	설명
+<T>	Type
+<E>	Element
+<K>	Key
+<V>	Value
+<N>	Number
+
+
+
+
+
 <img src="img/day30/" width="500" height="350" alt="">
 
 
