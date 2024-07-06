@@ -6,6 +6,7 @@
   - [Collection이란??](#Collection이란)
   - [List - ArrayList, LinkedList](#List)
   - [Set - HashSet](#set)
+  - [Map - HashMap, Hashtable](#map)
 
 
 ## 💡 컬렉션
@@ -153,9 +154,118 @@ set.add("윈터");
 set.remove("카리나");
 ```
 
+Set 컬렉션은 저장 순서가 유지되지 않기 때문에 인덱스로 객체를 가져올 수 없습니다.   
+그래서 인덱스로 객체를 검색해서 가져오는 메소드가 없죠.   
+대신, 전체 객체를 대상으로 한번씩 반복해서 가져오는 반복자(iterator)를 제공합니다.   
+반복자는 Iterator 인터페이스를 구현한 객체를 말하는데,   
+iterator() 메소드를 호출하면 얻을 수 있습니다.
+
+```java
+Set<String> set = ...;
+Iterator<String> iterator = set.iterator();
+```
+
+Iterator 인터페이스에 선언된 메소드
+
+| 리턴 타입 | 메소드명 | 설명 |
+| --- | --- | --- |
+| boolean | hasNext() | 가져올 객체가 있으면 true를 리턴하고 없으면 false를 리턴합니다 |
+| E | next() | 컬렉션에서 하나의 객체를 가져옵니다 |
+| void | remove() | Set 컬렉션에서 객체를 제거합니다 |
 
 
+```java
+Set<String> set = ...;
 
+Iterator<String> iterator = set.iterator();
+while (iterator.hasNext()) {		// 저장된 객체 수만큼 루핑
+	String str = iterator.next(); // String 객체 하나를 가져옴
+}
+
+Set<String> set = ...;
+        for (String str : set) {  //저장된 객체 수만큼 루핑
+
+        }
+```
+
+#### HashSet
+
+HashSet은 Set 인터페이스의 구현 클래스
+
+```java
+Set<E> set = new HashSet<E>();
+```
+
+<img src="img/day32/set.png" width="700" height="400" alt="">
+
+
+HashSet에 String 객체를 추가, 검색, 제거하는 방법
+
+```java
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class HashSetExample {
+	public static void main(String[] args) {
+		Set<String> set = new HashSet<>();
+		set.add("Java");
+		set.add("Spring");
+		set.add("Servlet/JSP");
+		set.add("Java");
+		set.add("DBMS");
+
+		System.out.println("총 객체수: " + set.size());  // 저장된 객체수 출력
+
+		Iterator<String> iterator = set.iterator();    // 반복자 얻기
+		while (iterator.hasNext()) {              // 객체 수 만큼 루핑
+			String element = iterator.next();       // 한 개의 객체를 가져온다
+			System.out.println("\t" + element);
+		}
+
+		set.remove("DBMS");      // 한 개의 객체 삭제
+		set.remove("Java");      // 한 개의 객체 삭제
+		System.out.println("총 객체수: " + set.size());
+
+		iterator = set.iterator();
+		while (iterator.hasNext()) { 
+			String element = iterator.next();
+			System.out.println("\t" + element);
+		}
+
+		set.clear();       // 모든 객체를 제거하고 비움
+		if (set.isEmpty()) {
+			System.out.println("비어있음");
+		}
+	}
+}
+```
+
+실행결과
+
+```java
+총 객체수: 4
+	Java
+	Servlet/JSP
+	DBMS
+	Spring
+총 객체수: 2
+	Servlet/JSP
+	Spring
+비어있음
+```
+
+### Map - HashMap, Hashtable
+<a id="map"></a>
+
+Map
+
+- 키(key)와 값(value)으로 구성된 객체를 저장하는 구조로
+- 키와 값은 모두 객체
+- 키는 중복될 수 없지만 값은 중복 저장될 수 있다.
+- 기존에 저장되었던 키값과 동일한 키값으로 저장하면 기존의 값은 없어지고 새로운 값으로 대치
+
+<img src="img/day32/map.png" width="700" height="400" alt="">
 
 
 
