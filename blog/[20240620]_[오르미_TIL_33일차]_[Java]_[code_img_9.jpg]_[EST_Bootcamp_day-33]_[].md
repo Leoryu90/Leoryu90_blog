@@ -6,6 +6,8 @@
   - [스레드](#스레드)
     - [자바에서의 스레드 생성](#자바에서의-스레드-생성)
     - [스레드 생명 주기](#스레드-생명-주기)
+  - [Java 람다 표현식](#java-람다-표현식)
+  - [Stream API](#stream-api)
 
 ## 💡 스레드 , 람다 , 스트림
 <a id="-스레드--람다--스트림"></a>
@@ -159,11 +161,153 @@ public class Main0620 {
   - `sleep(시간)` 메소드로 Blocked 상태가 된 스레드는 지정된 시간이 지나면 Runnable 상태로 전환됩니다.
 
 
+### Java 람다 표현식
+<a id="java-람다-표현식"></a>
+
+- 람다 표현식은 함수형 프로그래밍 개념을 자바에 도입한 것으로, 익명 함수를 생성하기 위한 표현식입니다.
+- 람다 표현식을 사용하면 코드를 간결하게 작성할 수 있고, 가독성을 높일 수 있습니다.
+
+기본 예시
 
 
-<details>
-<summary> 회고 </summary>
+기존 방식 (익명 내부 클래스)
+```java
+List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+Iterator<Integer> iterator = numbers.iterator();
+while (iterator.hasNext()) {
+Integer number = iterator.next();
+    if (number % 2 == 0) {
+        iterator.remove();
+    }
+}
+System.out.println(numbers);
+
+```
+
+람다 표현식 사용
+
+```java
+List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+numbers.removeIf(number -> number % 2 == 0);
+System.out.println(numbers);
+
+```
+
+두 방식 모두 출력 결과는 [1, 3, 5, 7, 9]
+
+### Stream API
+<a id="stream-api"></a>
+
+- Java 8에서 도입된 Stream API는 컬렉션, 배열 등의 데이터를 함수형 프로그래밍 스타일로 처리할 수 있는 기능을 제공합니다.
+- Stream은 데이터의 흐름을 나타내며, 중간 연산과 최종 연산을 통해 데이터를 처리할 수 있습니다.
+- Stream은 원본 데이터를 변경하지 않으며, 내부 반복을 통해 코드의 가독성과 유지보수성을 향상시킵니다.
+
+Stream 생성
+
+```java
+// 컬렉션에서 Stream 생성
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+Stream<Integer> stream = numbers.stream();
+
+// 배열에서 Stream 생성
+int[] array = {1, 2, 3, 4, 5};
+IntStream stream = Arrays.stream(array);
+
+// 직접 Stream 생성
+Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5);
+```
 
 
+#### 중간 연산
 
-</details>
+- 중간 연산은 Stream을 변환하고 필터링하는 등의 작업을 수행합니다.
+- 중간 연산은 lazy evaluation으로 이루어지며, 최종 연산이 호출될 때까지 실행되지 않습니다.
+
+`filter()`
+
+- 조건에 맞는 요소만 포함하는 새로운 Stream을 생성합니다.
+
+```java
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+Stream<Integer> evenStream = numbers.stream()
+                                    .filter(num -> num % 2 == 0);
+
+```
+
+`map()`
+
+- 각 요소에 주어진 함수를 적용한 결과로 이루어진 새로운 Stream을 생성합니다.
+
+```java
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+Stream<Integer> squaredStream = numbers.stream()
+                                       .map(num -> num * num);
+
+```
+
+`sorted()`
+
+- 요소를 정렬한 새로운 Stream을 생성합니다.
+
+```java
+List<Integer> numbers = Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6, 5);
+Stream<Integer> sortedStream = numbers.stream()
+                                      .sorted();
+
+```
+
+#### 최종 연산
+
+- 최종 연산은 Stream을 소비하여 결과를 생성합니다.
+- 최종 연산이 호출되면 Stream이 닫히며, 더 이상 사용할 수 없습니다.
+
+`forEach()`
+
+- Stream의 각 요소에 주어진 동작을 수행합니다.
+
+```java
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+numbers.stream()
+       .forEach(num -> System.out.println(num));
+
+```
+
+`collect()`
+
+- Stream의 요소를 수집하여 컬렉션이나 다른 형태로 변환합니다.
+
+```java
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+List<Integer> squaredNumbers = numbers.stream()
+                                      .map(num -> num * num)
+                                      .collect(Collectors.toList());
+
+```
+
+`reduce()`
+
+- Stream의 요소를 결합하여 하나의 값으로 만듭니다.
+
+```java
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+int sum = numbers.stream()
+                 .reduce(0, (a, b) -> a + b);
+
+```
+
+간단한 예제
+
+```java
+// 문자열 길이 매핑하기
+List<String> words = Arrays.asList("Java", "Stream", "API", "Example");
+
+List<Integer> wordLengths = words.stream()
+        .map(String::length)
+        .collect(Collectors.toList());
+
+System.out.println("문자열 길이: " + wordLengths);
+```
+
+
