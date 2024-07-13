@@ -2,18 +2,18 @@
 
 **목차**
 
-- [💡 AWS](#AWS)
-  - [AWS란?](#aws란)
+- [💡 Lightsail 인스턴스내 SpringBoot 실행](#Lightsail)
+  - [환경셋팅](#환경셋팅)
 
 
 
-## 💡 AWS
-<a id="AWS"></a>
+## 💡 Lightsail 인스턴스내 SpringBoot 실행
+<a id="Lightsail"></a>
 
-### 리눅스 명령어2탄?
-<a id="AWS란"></a>
+### 환경셋팅
+<a id="환경셋팅"></a>
 
-### aws로 스프링띄우기
+
 
 
 
